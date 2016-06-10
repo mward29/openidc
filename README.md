@@ -29,8 +29,7 @@ ${OIDCCLIENTID} realm name from keycloak.
 
 ${OIDCCLIENTSECRET} secret from realm. (In this case Keycloak realm secret) ex. below
 
-<img src="https://github.com/mward29/openidc/blob/master/realsecret.png?raw=true" width="300">
-
+<img src="https://github.com/mward29/openidc/blob/master/realmsecret.png?raw=true" width="300">
 
 ${OIDCCRYPTOPASSPHRASE} some random secret you create. ex. biteme
 
