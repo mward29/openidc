@@ -25,7 +25,7 @@ ${OIDCPROVIDERMETADATAURL} ex. https://my_domain/auth/realms/demo/.well-known/op
 
 ${OIDCCLIENTID} realm name from keycloak.
 
-![ScreenShot { width: 200px; }](https://raw.github.com/mward29/openidc/master/realmname.png)
+![ScreenShot](https://raw.github.com/mward29/openidc/master/realmname.png { width: 200px; })
 
 ${OIDCCLIENTSECRET} secret from realm. (In this case Keycloak realm secret) ex. dbc1r12f-ef60-364d-b1ed-97c35td1bccf
 
