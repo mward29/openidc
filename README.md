@@ -21,6 +21,7 @@ ${SSLCERT} ssl certificate file ex. /path/to/some/ca.pem
 ${SSLKEY} ssl certificate key file ex. /path/to/some/ca-key.pem
 
 ${OIDCPROVIDERMETADATAURL} ex. https://my_domain/auth/realms/demo/.well-known/openid-configuration
+
   Where 'demo' equals the name of your keycloak realm
 
 ${OIDCCLIENTID} realm name from keycloak.
