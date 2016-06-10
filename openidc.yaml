@@ -1,0 +1,40 @@
+---
+  apiVersion: "v1"
+  kind: "ReplicationController"
+  metadata:
+    namespace: kube-system
+    name: openidc
+    labels:
+      name: openidc
+  spec:
+    replicas: 1
+    template:
+      metadata:
+        name: "openidc"
+        labels:
+          name: openidc
+          pool: openidcpool
+      spec:
+        containers:
+          -
+            name: "openidc"
+            image: mward29/openidc
+            securityContext:
+              privileged: true
+            imagePullPolicy: Always
+            ports:
+              - containerPort: 443
+            volumeMounts:
+            - mountPath: /etc/kubernetes/ssl
+              name: ssl-certs-kubernetes
+              readOnly: true
+            - mountPath: /etc/ssl/certs
+              name: ssl-certs-host
+              readOnly: true
+        volumes:
+        - hostPath:
+            path: /etc/kubernetes/ssl
+          name: ssl-certs-kubernetes
+        - hostPath:
+            path: /usr/share/ca-certificates
+          name: ssl-certs-host

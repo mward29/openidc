@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: openidc
+  namespace: kube-system
+spec:
+  rules:
+  - host: %%DOMAIN_TO_USE%%
+    http:
+      paths:
+      - backend:
+          serviceName: openidc
+          servicePort: 443
+        path: /
